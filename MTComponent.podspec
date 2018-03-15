@@ -38,7 +38,7 @@ MTComponent is a component-based framework that can be implemented by splitting 
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'MTBaseObjects', '~> 0.1'
+  s.dependency 'MTBaseObjects', '~> 0.1.0'
   s.dependency 'MJExtension', '~> 3.0'
   
 end
