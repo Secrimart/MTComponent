@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jMV-Kc-qdP">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MTComponent-->
         <scene sceneID="wQg-tq-qST">
             <objects>
                 <viewController id="whP-gf-Uak" customClass="MTViewController" sceneMemberID="viewController">
@@ -20,12 +21,77 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQf-WX-aNe">
+                                <rect key="frame" x="31" y="229" width="313" height="30"/>
+                                <state key="normal" title="不加载组件业务数据"/>
+                                <connections>
+                                    <segue destination="xiE-NK-A6i" kind="show" identifier="NoBussData" id="ocP-wL-qQu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WL2-V7-ERA">
+                                <rect key="frame" x="31" y="364" width="313" height="30"/>
+                                <state key="normal" title="加载组件业务数据"/>
+                                <connections>
+                                    <segue destination="xiE-NK-A6i" kind="show" identifier="BussData" id="1l7-Qo-Raf"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WL2-V7-ERA" firstAttribute="top" secondItem="BQf-WX-aNe" secondAttribute="bottom" constant="105" id="DxN-69-aXa"/>
+                            <constraint firstItem="BQf-WX-aNe" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="165" id="GdT-5p-lEk"/>
+                            <constraint firstItem="WL2-V7-ERA" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="15" id="LfJ-si-ogA"/>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="WL2-V7-ERA" secondAttribute="bottom" constant="273" id="LlQ-mt-KgX"/>
+                            <constraint firstItem="BQf-WX-aNe" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="15" id="YPg-Jq-hSn"/>
+                            <constraint firstItem="WL2-V7-ERA" firstAttribute="top" secondItem="BQf-WX-aNe" secondAttribute="bottom" constant="105" id="liO-wO-3X6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WL2-V7-ERA" secondAttribute="trailing" constant="15" id="mtf-uv-bpL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BQf-WX-aNe" secondAttribute="trailing" constant="15" id="rtx-vZ-ls2"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="MTComponent" id="ifF-r8-X0w"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="1233" y="662"/>
+        </scene>
+        <!--Com Container ExampleVC-->
+        <scene sceneID="oQq-X4-9kg">
+            <objects>
+                <tableViewController storyboardIdentifier="ContainerVC" id="xiE-NK-A6i" customClass="MTComContainerExampleVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="a8J-jg-2RQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="xiE-NK-A6i" id="MiI-kH-tWv"/>
+                            <outlet property="delegate" destination="xiE-NK-A6i" id="aUJ-Kd-Wbs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="7e4-aL-BeR"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S3z-dK-gbh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2270" y="662"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kiJ-B0-ntT">
+            <objects>
+                <navigationController id="jMV-Kc-qdP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HkU-0s-D1C">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="whP-gf-Uak" kind="relationship" relationship="rootViewController" id="p08-cs-7Cy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rFy-zD-KDM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="286" y="662"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ocP-wL-qQu"/>
+    </inferredMetricsTieBreakers>
 </document>

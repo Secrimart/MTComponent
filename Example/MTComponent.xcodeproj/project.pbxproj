@@ -19,10 +19,13 @@
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		6FBE788B0471E2B91FC7CE60 /* Pods_MTComponent_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89E4C100B360F47A4A059D6 /* Pods_MTComponent_Tests.framework */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		96396E3F205A074000A21C60 /* MTComContainerExampleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 96396E3E205A074000A21C60 /* MTComContainerExampleVC.m */; };
+		96396E42205A0AEC00A21C60 /* MTComponentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 96396E41205A0AEC00A21C60 /* MTComponentVC.m */; };
+		965869D02058C1D6000CAA7F /* MTTComContainerVMTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 965869CF2058C1D6000CAA7F /* MTTComContainerVMTest.m */; };
+		965869D22058C362000CAA7F /* MTComponentTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 965869D12058C362000CAA7F /* MTComponentTest.m */; };
 		D6260E070A0092E349D2B4C0 /* Pods_MTComponent_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 785649B5D6342904748D8C72 /* Pods_MTComponent_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,8 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		36261917D3D80237119949E8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		3ABB09577B033EE788784B03 /* MTComponent.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MTComponent.podspec; path = ../MTComponent.podspec; sourceTree = "<group>"; };
+		36261917D3D80237119949E8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		3ABB09577B033EE788784B03 /* MTComponent.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MTComponent.podspec; path = ../MTComponent.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		535B26F6DC0B654F31E93342 /* Pods-MTComponent_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTComponent_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTComponent_Example/Pods-MTComponent_Example.release.xcconfig"; sourceTree = "<group>"; };
 		59F58CB7E64E4B456565F96F /* Pods-MTComponent_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTComponent_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MTComponent_Example/Pods-MTComponent_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* MTComponent_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTComponent_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,12 +61,17 @@
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		785649B5D6342904748D8C72 /* Pods_MTComponent_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTComponent_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E88AA57B7E9C93BF9EBFB31 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		7E88AA57B7E9C93BF9EBFB31 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		96396E3D205A074000A21C60 /* MTComContainerExampleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTComContainerExampleVC.h; sourceTree = "<group>"; };
+		96396E3E205A074000A21C60 /* MTComContainerExampleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTComContainerExampleVC.m; sourceTree = "<group>"; };
+		96396E40205A0AEC00A21C60 /* MTComponentVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTComponentVC.h; sourceTree = "<group>"; };
+		96396E41205A0AEC00A21C60 /* MTComponentVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTComponentVC.m; sourceTree = "<group>"; };
+		965869CF2058C1D6000CAA7F /* MTTComContainerVMTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTTComContainerVMTest.m; sourceTree = "<group>"; };
+		965869D12058C362000CAA7F /* MTComponentTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTComponentTest.m; sourceTree = "<group>"; };
 		CF950D736B3BC6D5B5DCB06D /* Pods-MTComponent_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTComponent_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTComponent_Tests/Pods-MTComponent_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D131ABA7901B49648C162DFE /* Pods-MTComponent_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTComponent_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MTComponent_Tests/Pods-MTComponent_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F89E4C100B360F47A4A059D6 /* Pods_MTComponent_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTComponent_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +148,10 @@
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				96396E3D205A074000A21C60 /* MTComContainerExampleVC.h */,
+				96396E3E205A074000A21C60 /* MTComContainerExampleVC.m */,
+				96396E40205A0AEC00A21C60 /* MTComponentVC.h */,
+				96396E41205A0AEC00A21C60 /* MTComponentVC.m */,
 			);
 			name = "Example for MTComponent";
 			path = MTComponent;
@@ -159,8 +171,9 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6003F5BB195388D20070C39A /* Tests.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
+				965869CF2058C1D6000CAA7F /* MTTComContainerVMTest.m */,
+				965869D12058C362000CAA7F /* MTComponentTest.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -247,7 +260,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = MT;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "rstx_reg@aliyun.com";
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
@@ -370,11 +383,27 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MTComponent_Example/Pods-MTComponent_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/BackButtonHandler/BackButtonHandler.framework",
+				"${BUILT_PRODUCTS_DIR}/JLFramework/JLFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/JRSwizzle/JRSwizzle.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/MTBaseObjects/MTBaseObjects.framework",
 				"${BUILT_PRODUCTS_DIR}/MTComponent/MTComponent.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BackButtonHandler.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JLFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JRSwizzle.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MTBaseObjects.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MTComponent.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -403,6 +432,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96396E3F205A074000A21C60 /* MTComContainerExampleVC.m in Sources */,
+				96396E42205A0AEC00A21C60 /* MTComponentVC.m in Sources */,
 				6003F59E195388D20070C39A /* MTAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* MTViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
@@ -413,7 +444,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				965869D22058C362000CAA7F /* MTComponentTest.m in Sources */,
+				965869D02058C1D6000CAA7F /* MTTComContainerVMTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,19 +495,30 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -503,18 +546,29 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
