@@ -52,6 +52,12 @@
         [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
         [self.tableView endUpdates];
     }
+    
+    // 刷新组件
+    UIViewController<MTComponentProtocol> * vc = [self componentViewControllerWithIndexPath:indexPath];
+    if ([vc respondsToSelector:@selector(toReloadComponent)]) {
+        [vc toReloadComponent];
+    }
 }
 
 //MARK: - Getter And Setter
@@ -82,6 +88,7 @@
             UIViewController *compVC = comp.instanceComponentVC;
             NSAssert(compVC, @"The %@ Component ViewController instance failed!",comp.componentName);
             [rows addObject:compVC];
+            [self addChildController:compVC];
         }
         [_arrayComponentVCs addObject:rows];
     }
