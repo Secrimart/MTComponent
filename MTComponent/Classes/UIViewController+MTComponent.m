@@ -25,6 +25,12 @@
 
 - (void)setCompBussData:(NSDictionary *)compBussData {
     objc_setAssociatedObject(self, @selector(compBussData), compBussData, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
+    [self componentDidChangedBussData];
+}
+
+- (void)componentDidChangedBussData {
+    
 }
 
 - (NSIndexPath *)compIndexPath {
