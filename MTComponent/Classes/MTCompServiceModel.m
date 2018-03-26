@@ -7,10 +7,12 @@
 
 #import "MTCompServiceModel.h"
 
+@import MJExtension;
+
 @implementation MTCompServiceModel
 
 + (instancetype)initWithDict:(NSDictionary *)dict {
-    return [MTSwipePage mj_objectWithKeyValues:dict];
+    return [MTCompServiceModel mj_objectWithKeyValues:dict];
 }
 
 - (NSURL *)pageLandingURL {

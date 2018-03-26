@@ -8,7 +8,8 @@
 #import <Foundation/Foundation.h>
 #import "MTComponentProtocol.h"
 
-@interface MTCompServiceModel : NSObject
+@import MTBaseObjects;
+@interface MTCompServiceModel : MTBaseModel
 
 + (instancetype)initWithDict:(NSDictionary *)dict;
 
