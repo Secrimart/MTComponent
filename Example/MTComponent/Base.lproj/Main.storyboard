@@ -26,14 +26,14 @@
                                 <rect key="frame" x="31" y="229" width="313" height="30"/>
                                 <state key="normal" title="不加载组件业务数据"/>
                                 <connections>
-                                    <segue destination="xiE-NK-A6i" kind="show" identifier="NoBussData" id="ocP-wL-qQu"/>
+                                    <segue destination="xiE-NK-A6i" kind="show" identifier="NoServiceData" id="ocP-wL-qQu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WL2-V7-ERA">
                                 <rect key="frame" x="31" y="364" width="313" height="30"/>
                                 <state key="normal" title="加载组件业务数据"/>
                                 <connections>
-                                    <segue destination="xiE-NK-A6i" kind="show" identifier="BussData" id="1l7-Qo-Raf"/>
+                                    <segue destination="xiE-NK-A6i" kind="show" identifier="ServiceData" id="1l7-Qo-Raf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -92,6 +92,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ocP-wL-qQu"/>
+        <segue reference="1l7-Qo-Raf"/>
     </inferredMetricsTieBreakers>
 </document>

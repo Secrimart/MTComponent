@@ -13,7 +13,7 @@
 
 @interface MTViewController ()<MTComponentDataSource>
 
-@property (nonatomic, strong) NSArray *bussData;
+@property (nonatomic, strong) NSArray *serviceData;
 
 @end
 
@@ -35,7 +35,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    self.bussData = @[@{@"top":@[@"1",@"2",@"3"],
+    self.serviceData = @[@{@"top":@[@"1",@"2",@"3"],
                         @"Bottom":@[@"1",@"2",@"3"]}];
 }
 
@@ -66,14 +66,14 @@
     return @[comp0,comp1,comp2];
 }
 
-- (NSArray<NSDictionary *> *)componentBussData {
-    return self.bussData;
+- (NSArray<NSDictionary *> *)componentserviceData {
+    return self.serviceData;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     ((MTComContainerExampleVC *)segue.destinationViewController).dataSource = self;
-    if ([segue.identifier isEqualToString:@"NoBussData"]) {
-        self.bussData = nil;
+    if ([segue.identifier isEqualToString:@"NoServiceData"]) {
+        self.serviceData = nil;
     }
 }
 

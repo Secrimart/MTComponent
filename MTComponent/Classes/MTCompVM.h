@@ -12,6 +12,6 @@
 
 @interface MTCompVM : MTBaseViewModel<MTCompViewModelProtocol>
 
-@property (nonatomic, strong) NSDictionary *bussData; // 业务数据
+@property (nonatomic, strong) NSDictionary *serviceData; // 业务数据
 
 @end

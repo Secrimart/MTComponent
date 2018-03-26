@@ -23,9 +23,9 @@
         
         // 存在业务数据时，没有业务数据节点的组件按照无效组件处理
         BOOL isValidComponent = YES;
-        if (self.arrayBussData) {
+        if (self.arrayServiceData) {
             isValidComponent = NO;
-            for (NSDictionary *dict in self.arrayBussData) {
+            for (NSDictionary *dict in self.arrayServiceData) {
                 if ([[dict allKeys] containsObject:comp.dataKey]) {
                     isValidComponent = YES;
                     break;
@@ -88,13 +88,13 @@
     return self.dataSource[indexPath.section][indexPath.row];
 }
 
-- (NSDictionary *)componentBussDataAtIndexPath:(NSIndexPath *)indexPath {
-    if (!self.arrayBussData) return nil;
+- (NSDictionary *)componentServiceDataAtIndexPath:(NSIndexPath *)indexPath {
+    if (!self.arrayServiceData) return nil;
     
     NSString *dataKey = [self compontAtIndexPath:indexPath].dataKey;
     
     NSMutableDictionary *resultDict = [NSMutableDictionary dictionaryWithCapacity:0];
-    for (id obj in self.arrayBussData) {
+    for (id obj in self.arrayServiceData) {
         if ([obj isKindOfClass:[NSDictionary class]]) {
             NSDictionary *dict = (NSDictionary *)obj;
             if ([[dict allKeys] containsObject:dataKey]) {

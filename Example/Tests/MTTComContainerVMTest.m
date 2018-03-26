@@ -62,7 +62,7 @@
     [super tearDown];
 }
 
-- (void)testtoReloadDataSource_NoBussData {
+- (void)testtoReloadDataSource_NoServiceData {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     MTTComContainerVM *vm = [[MTTComContainerVM alloc] init];
@@ -86,10 +86,10 @@
     XCTAssertEqual(validComp, validCount);
 }
 
-- (void)testToReloadDataSource_BussData {
+- (void)testToReloadDataSource_ServiceData {
     MTTComContainerVM *vm = [[MTTComContainerVM alloc] init];
     vm.arrayComponents = self.components;
-    vm.arrayBussData = self.data;
+    vm.arrayServiceData = self.data;
     
     [vm toReloadDataSourceBeforeRequest:nil onFinished:nil onFailed:nil];
     
@@ -142,17 +142,17 @@
     XCTAssert([comp.dataKey isEqualToString:@"top15"]);
 }
 
-- (void)testComponentBussDataAtIndexPath {
+- (void)testComponentServiceDataAtIndexPath {
     MTTComContainerVM *vm = [[MTTComContainerVM alloc] init];
     vm.arrayComponents = self.components;
-    vm.arrayBussData = self.data;
+    vm.arrayServiceData = self.data;
     
     [vm toReloadDataSourceBeforeRequest:nil onFinished:nil onFailed:nil];
     
     NSIndexPath *index = [vm indexPathOfComponentWithName:@"name60"];
     
     XCTAssert(index);
-    NSDictionary *dict = [vm componentBussDataAtIndexPath:index];
+    NSDictionary *dict = [vm componentServiceDataAtIndexPath:index];
     XCTAssert(dict);
     XCTAssert([[dict allKeys].firstObject isEqualToString:@"top60"]);
     XCTAssertEqual(((NSArray *)dict[@"top60"]).count, 3);

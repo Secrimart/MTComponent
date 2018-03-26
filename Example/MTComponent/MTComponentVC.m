@@ -47,7 +47,7 @@
         self.labShowData.backgroundColor = [UIColor blueColor];
     }
     
-    self.labShowData.text = [self.compBussData JSONString];
+    self.labShowData.text = [self.compServiceData JSONString];
 }
 
 - (CGSize)componentSize {

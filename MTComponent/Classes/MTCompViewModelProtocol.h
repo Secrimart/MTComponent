@@ -11,7 +11,7 @@
 
 @required
 
-- (void)toReloadDataSourceWithBussData:(NSDictionary *)bussData;
+- (void)toReloadDataSourceWithServiceData:(NSDictionary *)serviceData;
 
 - (void)toConstructionDataSource;
 

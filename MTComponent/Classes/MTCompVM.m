@@ -9,8 +9,8 @@
 
 @implementation MTCompVM
 
-- (void)toReloadDataSourceWithBussData:(NSDictionary *)bussData {
-    self.bussData = bussData;
+- (void)toReloadDataSourceWithServiceData:(NSDictionary *)serviceData {
+    self.serviceData = serviceData;
     self.dataSource = nil;
     [self toReloadDataSourceBeforeRequest:nil onFinished:nil onFailed:nil];
 }
@@ -18,7 +18,7 @@
 - (void)toReloadDataSourceBeforeRequest:(VoidBlock)before onFinished:(DataSourceStatusBlock)finished onFailed:(VoidBlock)failed {
     if (before) before();
     
-    if (self.bussData.count == 0) {
+    if (self.serviceData.count == 0) {
         if (failed) failed();
         return;
     }

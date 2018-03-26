@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) NSArray<MTComponent *> *arrayComponents; // 组件数据 组数
 
-@property (nonatomic, strong) NSArray *arrayBussData; // 存储组件的业务数据
+@property (nonatomic, strong) NSArray *arrayServiceData; // 存储组件的业务数据
 
 /**
  通过组件名称获取组件在 TableView容器中的 indexPath位置
@@ -36,6 +36,6 @@
  @param indexPath 组件位置
  @return 组件业务数据，可能为nil
  */
-- (NSDictionary *)componentBussDataAtIndexPath:(NSIndexPath *)indexPath;
+- (NSDictionary *)componentServiceDataAtIndexPath:(NSIndexPath *)indexPath;
 
 @end

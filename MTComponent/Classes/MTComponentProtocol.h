@@ -25,7 +25,7 @@
 
  @return NSDictionary对象数组
  */
-- (NSArray<NSDictionary *> *)componentBussData;
+- (NSArray<NSDictionary *> *)componentServiceData;
 
 @end
 
@@ -66,7 +66,7 @@
 
  @param dictData 组件业务数据
  */
-- (void)setupComponentBussData:(NSDictionary *)dictData;
+- (void)setupComponentServiceData:(NSDictionary *)dictData;
 
 
 @end

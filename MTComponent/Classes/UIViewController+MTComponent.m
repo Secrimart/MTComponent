@@ -19,17 +19,17 @@
     objc_setAssociatedObject(self, @selector(comp), comp, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (NSDictionary *)compBussData {
-    return objc_getAssociatedObject(self, @selector(compBussData));
+- (NSDictionary *)compServiceData {
+    return objc_getAssociatedObject(self, @selector(compServiceData));
 }
 
-- (void)setCompBussData:(NSDictionary *)compBussData {
-    objc_setAssociatedObject(self, @selector(compBussData), compBussData, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setCompServiceData:(NSDictionary *)compServiceData {
+    objc_setAssociatedObject(self, @selector(compServiceData), compServiceData, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
-    [self componentDidChangedBussData];
+    [self componentDidChangedServiceData];
 }
 
-- (void)componentDidChangedBussData {
+- (void)componentDidChangedServiceData {
     
 }
 
@@ -57,8 +57,8 @@
     self.compIndexPath = indexPath;
 }
 
-- (void)setupComponentBussData:(NSDictionary *)dictData {
-    self.compBussData = dictData;
+- (void)setupComponentServiceData:(NSDictionary *)dictData {
+    self.compServiceData = dictData;
 }
 
 @end

@@ -69,8 +69,8 @@
     
     _containerVM.arrayComponents = [self.dataSource componentLocalConfigData];
     
-    if ([self.dataSource respondsToSelector:@selector(componentBussData)]) {
-        _containerVM.arrayBussData = [self.dataSource componentBussData];
+    if ([self.dataSource respondsToSelector:@selector(componentServiceData)]) {
+        _containerVM.arrayServiceData = [self.dataSource componentServiceData];
     }
     
     [_containerVM toReloadDataSourceBeforeRequest:nil onFinished:nil onFailed:nil];
@@ -118,8 +118,8 @@
         [viewController setupComponentIndexPath:indexPath];
     }
     
-    if ([viewController respondsToSelector:@selector(setupComponentBussData:)]) {
-        [viewController setupComponentBussData:[self.containerVM componentBussDataAtIndexPath:indexPath]];
+    if ([viewController respondsToSelector:@selector(setupComponentServiceData:)]) {
+        [viewController setupComponentServiceData:[self.containerVM componentServiceDataAtIndexPath:indexPath]];
     }
     
     if ([viewController respondsToSelector:@selector(setupComponent:)]) {
