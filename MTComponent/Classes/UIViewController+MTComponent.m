@@ -41,6 +41,14 @@
     objc_setAssociatedObject(self, @selector(compIndexPath), compIndexPath, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
+- (UIViewController<MTComponentProtocol> *)componentContainerViewController {
+    return objc_getAssociatedObject(self, @selector(componentContainerViewController));
+}
+
+- (void)setComponentContainerViewController:(UIViewController<MTComponentProtocol> *)componentContainerViewController {
+    objc_setAssociatedObject(self, @selector(componentContainerViewController), componentContainerViewController, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
 - (void)toReloadComponent {
     
 }

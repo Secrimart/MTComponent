@@ -9,6 +9,7 @@
 
 #import "MTTComContainerVM.h"
 #import "MTComponent.h"
+#import "UIViewController+MTComponent.h"
 
 @interface MTTComContainerVC ()
 @property (nonatomic, strong) MTTComContainerVM *containerVM; // 视图模型
@@ -86,6 +87,7 @@
         NSMutableArray *rows = [NSMutableArray arrayWithCapacity:0];
         for (MTComponent *comp in array) {
             UIViewController *compVC = comp.instanceComponentVC;
+            compVC.componentContainerViewController = self;
             NSAssert(compVC, @"The %@ Component ViewController instance failed!",comp.componentName);
             [rows addObject:compVC];
             [self addChildController:compVC];
