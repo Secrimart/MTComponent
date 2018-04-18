@@ -66,7 +66,7 @@
     return @[comp0,comp1,comp2];
 }
 
-- (NSArray<NSDictionary *> *)componentserviceData {
+- (NSArray<NSDictionary *> *)componentServiceData {
     return self.serviceData;
 }
 

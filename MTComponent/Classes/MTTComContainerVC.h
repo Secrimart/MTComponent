@@ -8,7 +8,7 @@
 #import "MTComponentProtocol.h"
 
 @import MTBaseObjects;
-@import JLFramework;
+@import MTFramework;
 
 @interface MTTComContainerVC : MTBaseTableViewController<MTComponentProtocol>
 

@@ -8,7 +8,7 @@
 #import "UIViewController+MTComponent.h"
 #import <objc/runtime.h>
 
-@import JLFramework;
+@import MTFramework;
 
 @implementation UIViewController (MTComponent)
 - (MTComponent *)comp {

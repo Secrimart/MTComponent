@@ -9,7 +9,7 @@
 #import "MTComponentVC.h"
 
 @import Masonry;
-@import JLFramework;
+@import MTFramework;
 
 @interface MTComponentVC ()
 @property (nonatomic, strong) UILabel *labShowData;
@@ -38,8 +38,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     
     if (self.compIndexPath.row % 2 == 0) {
         self.labShowData.backgroundColor = [UIColor redColor];
